@@ -1,0 +1,209 @@
+/* Fundo de doces */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    background-image: url('candy-pattern.png'); /* Substitua 'candy-pattern.png' pelo caminho da sua imagem de doces */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização do cabeçalho e rodapé com padrão de ondas */
+header, footer.wave-pattern {
+    width: 100%;
+    height: 100px;
+    background: url('wave-pattern.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+/* Título */
+h1 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.6); /* Fundo leve para destacar o título */
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Estilização dos itens do menu com bordas arredondadas e sombras */
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #F77A0F;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f75024;
+}
+
+/* Estilos para o footer e ícones sociais */
+.contact {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    color: #F77A0F;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Adicionar efeitos de hover nos links */
+.social-link:hover .social-icon {
+    opacity: 0.8;
+}
+
+/* Estilização do botão e formatação dos textos */
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: white;
+    background-color: #F77A0F;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #F75024;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.origin-tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.origin-tech .logo {
+    width: 30px; /* Ajuste o tamanho da logo */
+    height: auto;
+    margin-left: 5px;
+}
+
+.wave-pattern {
+    width: 100%;
+    height: 50px;
+    background: url('wave-pattern.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Estilização do popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.popup-content select, .popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-content button {
+    margin-top: 20px;
+}

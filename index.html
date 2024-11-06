@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome para ícones -->
+</head>
+<body>
+    <header class="wave-pattern"></header>
+    
+    <main>
+        <h1>DOCES PREMIUM</h1>
+        <p class="subtitle">SOBREMESAS PREMIUM DENTRO DE UM POTINHO!</p>
+        
+        <section class="menu">
+            <div class="menu-item">
+                <span>Prestígio</span> <span class="price">R$ 5,00</span>
+                <p class="description">Creme de coco com brigadeiro</p>
+                <button onclick="enviarPedido('Prestígio')">Pedir</button>
+            </div>
+
+            <div class="menu-item">
+                <span>Mousse de Morango</span> <span class="price">R$ 5,00</span>
+                <p class="description">Mousse de morango com pedaços</p>
+                <button onclick="enviarPedido('Mousse de Morango')">Pedir</button>
+            </div>
+
+            <div class="menu-item">
+                <span>Mousse de Maracujá</span> <span class="price">R$ 5,00</span>
+                <p class="description">Mousse de maracujá com cobertura de chocolate</p>
+                <button onclick="enviarPedido('Mousse de Maracujá')">Pedir</button>
+            </div>
+
+            <div class="menu-item">
+                <span>Trufas</span> <span class="price">R$ 3,00</span>
+                <p class="description">MMs, Morango com Brigadeiro, Doce de Leite, Oreo, Limão, Castanha</p>
+                <button onclick="enviarPedido('Trufas')">Pedir</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <div id="flavor-section" class="flavor-section" style="display: none;">
+                <label for="flavor">Escolha o sabor:</label>
+                <select id="flavor">
+                    <option value="M&Ms">M&Ms</option>
+                    <option value="Morango com Brigadeiro">Morango com Brigadeiro</option>
+                    <option value="Doce de Leite">Doce de Leite</option>
+                    <option value="Oreo">Oreo</option>
+                    <option value="Limão">Limão</option>
+                    <option value="Castanha">Castanha</option>
+                </select>
+            </div>
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <button onclick="sendToWhatsApp()">Enviar Pedido</button>
+            <button onclick="closePopup()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Footer com as redes sociais e o rodapé -->
+    <footer class="contact">
+        <a href="https://www.instagram.com/taliavitoria5053?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-link">
+            <i class="fab fa-instagram social-icon"></i>
+            @taliavitoria5053
+        </a>
+        <a href="https://wa.me/5585997502373?text=Ol%C3%A1%2C%20eu%20vim%20pelo%20o%20seu%20site%2C%20estou%20interessado%28a%29%20em%20mais%20informa%C3%A7%C3%B5es" target="_blank" class="social-link">
+            <i class="fab fa-whatsapp social-icon"></i>
+            (85) 99750-2373
+        </a>
+    </footer>
+
+    <footer class="footer">
+        <p>&#169; 2024 Desenvolvido por <span class="origin-tech">Origin Tech</span></p>
+    </footer>
+
+    <footer class="wave-pattern"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
