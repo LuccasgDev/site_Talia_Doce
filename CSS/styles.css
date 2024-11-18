@@ -71,6 +71,20 @@ h1::after {
     transform: scale(1.05);
 }
 
+/* Ícone do carrinho no canto direito */
+#cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+
+
+
+
 .price {
     font-size: 1.2em;
     font-weight: bold;
@@ -207,3 +221,60 @@ button:hover {
 .popup-content button {
     margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+/* fundo semitransparente */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998; 
+}
+
+/* Ícone do carrinho */
+#cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* CARRINHO */
+#cart {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+    z-index: 1000; /* Carrinho na frente do overlay */
+}
+
+.cart-visible {
+    display: block;
+}
+
+.cart-hidden {
+    display: none;
+}
+
+

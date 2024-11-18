@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doces Premium</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesCarrinho.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome para ícones -->
 </head>
 <body>
@@ -14,6 +15,23 @@
         <h1>DOCES PREMIUM</h1>
         <p class="subtitle">SOBREMESAS PREMIUM DENTRO DE UM POTINHO!</p>
         
+            <!-- Overlay para fundo semitransparente -->
+            <div id="overlay" class="overlay-hidden" onclick="toggleCart()"></div>
+
+
+            <!-- Ícone Carrinho -->
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒
+            </div>
+
+            <!-- Carrinho -->
+            <div id="cart" class="cart-hidden">
+                <h2>Carrinho de Compras</h2>
+                <ul id="cart-items"></ul>
+                <p id="total-price">Total: R$0.00</p>
+                <button onclick="sendOrder()">Enviar Pedido</button>
+            </div>
+
         <section class="menu">
             <div class="menu-item">
                 <span>Prestígio</span> <span class="price">R$ 5,00</span>
@@ -45,7 +63,9 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <h2 id="popup-title"></h2>
-            <div id="flavor-section" class="flavor-section" style="display: none;">
+            
+            <!-- Sabores -->
+            <div id="flavor-section" style="display: none;">
                 <label for="flavor">Escolha o sabor:</label>
                 <select id="flavor">
                     <option value="M&Ms">M&Ms</option>
@@ -56,10 +76,13 @@
                     <option value="Castanha">Castanha</option>
                 </select>
             </div>
+            
+            <!-- Seleção Quantidade -->
             <label for="quantity">Quantidade:</label>
-            <input type="number" id="quantity" min="1" value="1">
-            <button onclick="sendToWhatsApp()">Enviar Pedido</button>
-            <button onclick="closePopup()">Fechar</button>
+            <input type="number" id="quantity" value="1" min="1">
+    
+            <!-- Botão para adicionar -->
+            <button onclick="addToCart()">Adicionar ao Carrinho</button>
         </div>
     </div>
 
@@ -81,6 +104,8 @@
 
     <footer class="wave-pattern"></footer>
 
-    <script src="script.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/scriptCarrinho.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>

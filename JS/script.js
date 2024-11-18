@@ -41,3 +41,4 @@ function sendToWhatsApp() {
     // Fecha o popup após o envio
     closePopup();
 }
+
